@@ -289,11 +289,7 @@ $color-grey-dark-3: #333;
 
   @include respond(phone) {
     font-size: 1.4rem;
-    font-weight: 500;
-  }
-
-  @include respond(micro-phone) {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
