@@ -70,7 +70,7 @@ $color-grey-dark-3: #333;
 
     @include respond(phone) {
       letter-spacing: 1rem;
-      font-family: 5rem;
+      font-size: 5rem;
     }
   }
 
@@ -238,6 +238,10 @@ $color-grey-dark-3: #333;
       grid-template-columns: 1fr;
       grid-gap: 6rem;
     }
+
+    @include respond(micro-phone) {
+      max-width: 32rem;
+    }
   }
 
   @include respond(tab-port) {
@@ -268,6 +272,10 @@ $color-grey-dark-3: #333;
     font-size: 2.5rem;
   }
 
+  @include respond(micro-phone) {
+    font-size: 2rem;
+  }
+
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color: #000000, $alpha: 0.2);
@@ -278,6 +286,15 @@ $color-grey-dark-3: #333;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  @include respond(micro-phone) {
+    font-weight: 500;
+  }
 }
 
 .paragraph {
@@ -416,6 +433,14 @@ $color-grey-dark-3: #333;
       max-width: 50rem;
       grid-template-columns: 1fr;
     }
+
+    @include respond(phone) {
+      max-width: 40rem;
+    }
+
+    @include respond(micro-phone) {
+      max-width: 30rem;
+    }
   }
 }
 
@@ -478,6 +503,14 @@ $color-grey-dark-3: #333;
     @include respond(tab-port) {
       max-width: 50rem;
       grid-template-columns: 1fr;
+    }
+
+    @include respond(phone) {
+      max-width: 40rem;
+    }
+
+    @include respond(micro-phone) {
+      max-width: 30rem;
     }
   }
 }
@@ -730,7 +763,11 @@ $color-grey-dark-3: #333;
     }
 
     @include respond(phone) {
-      max-width: 50rem;
+      max-width: 45rem;
+    }
+
+    @include respond(micro-phone) {
+      max-width: 35rem;
     }
 
     &:not(:last-child) {
@@ -893,6 +930,11 @@ $color-grey-dark-3: #333;
       url(assets/nat-10.jpg);
   }
 
+  @include respond(phone) {
+    margin: 0 auto;
+    width: 80%;
+  }
+
   &__form {
     width: 50%;
     padding: 6rem;
@@ -1016,6 +1058,14 @@ $color-grey-dark-3: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
   color: $color-grey-light-1;
+
+  @include respond(tab-land) {
+    font-size: 2rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
 
   &__grid {
     max-width: 114rem;
@@ -1346,8 +1396,10 @@ $color-grey-dark-3: #333;
     hyphens: auto;
 
     @include respond(tab-port) {
-      -moz-column-count: 1;
-      column-count: 1;
+      -moz-column-count: auto;
+      column-count: auto;
+      height: 20rem;
+      overflow: scroll;
     }
   }
 
