@@ -1,9 +1,15 @@
 import React from 'react';
 import logo from './assets/logo-white.png';
+import logo1x from './assets/logo-green-1x.png';
 import logo2x from './assets/logo-green-2x.png';
+import logoSmall1x from './assets/logo-green-small-1x.png';
+import logoSmall2x from './assets/logo-green-small-2x.png';
 import pictureNat1 from './assets/nat-1-large.jpg';
+import pictureNat1Small from './assets/nat-1.jpg';
 import pictureNat2 from './assets/nat-2-large.jpg';
+import pictureNat2Small from './assets/nat-2.jpg';
 import pictureNat3 from './assets/nat-3-large.jpg';
+import pictureNat3Small from './assets/nat-3.jpg';
 import pictureNat8 from './assets/nat-8.jpg';
 import pictureNat9 from './assets/nat-9.jpg';
 import backgroundVideoMP4 from './assets/video.mp4';
@@ -102,19 +108,27 @@ function App() {
             </div>
             <div className="composition">
               <img
-                src={pictureNat1}
-                alt="Photo1"
-                className="composition__photo composition__photo--p1"
+                srcSet={`${pictureNat1Small} 300w, ${pictureNat1} 1000w`}
+                sizes={`(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px`}
+                alt={`1`}
+                className={`composition__photo composition__photo--p1`}
+                src={`${pictureNat1}`}
               />
+
               <img
-                src={pictureNat2}
-                alt="Photo2"
-                className="composition__photo composition__photo--p2"
+                srcSet={`${pictureNat2Small} 300w, ${pictureNat2} 1000w`}
+                sizes={`(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px`}
+                alt={`2`}
+                className={`composition__photo composition__photo--p2`}
+                src={`${pictureNat2}`}
               />
+
               <img
-                src={pictureNat3}
-                alt="Photo3"
-                className="composition__photo composition__photo--p3"
+                srcSet={`${pictureNat3Small} 300w, ${pictureNat3} 1000w`}
+                sizes={`(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px`}
+                alt={`3`}
+                className={`composition__photo composition__photo--p3`}
+                src={`${pictureNat3}`}
               />
             </div>
           </div>
@@ -416,7 +430,17 @@ function App() {
 
       <footer className="footer">
         <div className="footer__logo-box">
-          <img alt="Full logo" src={logo2x} className="footer__logo" />
+          <picture className="footer__logo">
+            <source
+              srcSet={`${logoSmall1x} 1x, ${logoSmall2x} 2x`}
+              media="(max-width: 37.5em)"
+            />
+            <img
+              srcSet={`${logo1x} 1x, ${logo2x} 2x`}
+              alt="Full logo"
+              src={logo2x}
+            />
+          </picture>
         </div>
         <div className="footer__grid">
           <div className="footer__column">

@@ -25,11 +25,22 @@ $color-grey-dark-3: #333;
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(assets/hero.jpg);
+    url(assets/hero-small.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(assets/hero.jpg);
+  }
 
   &__logo-box {
     position: absolute;
@@ -257,12 +268,16 @@ $color-grey-dark-3: #333;
     }
 
     @include respond(micro-phone) {
-      max-width: 32rem;
+      max-width: 40rem;
     }
   }
 
   @include respond(tab-port) {
     padding: 20rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 25rem 0;
   }
 }
 
@@ -510,7 +525,7 @@ $color-grey-dark-3: #333;
     }
 
     @include respond(micro-phone) {
-      max-width: 30rem;
+      max-width: 38rem;
     }
   }
 }
