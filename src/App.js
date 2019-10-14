@@ -276,7 +276,7 @@ function App() {
             </video>
           </div>
 
-          <div className="center-text margin-bottom-big">
+          <div className="center-text margin-bottom-big max-width-big">
             <h2 className="heading-secondary">
               We make people genuinely happy
             </h2>
@@ -319,7 +319,7 @@ function App() {
               </figure>
               <div className="story__text">
                 <h3 className="heading-tertiary margin-bottom-small">
-                  WOW! My life is completely different now
+                  WOW! My life is different now
                 </h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
