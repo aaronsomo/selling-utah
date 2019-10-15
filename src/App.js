@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import logo from './assets/logo-white.png';
 import logo1x from './assets/logo-green-1x.png';
 import logo2x from './assets/logo-green-2x.png';
@@ -17,6 +17,7 @@ import backgroundVideoWebm from './assets/video.webm';
 import './App.scss';
 
 function App() {
+  const navCheckbox = useRef(null);
   return (
     <div>
       <div className="navigation">
@@ -24,6 +25,7 @@ function App() {
           type="checkbox"
           className="navigation__checkbox"
           id="navi-toggle"
+          ref={navCheckbox}
         />
 
         <label htmlFor="navi-toggle" className="navigation__button">
@@ -35,27 +37,47 @@ function App() {
         <nav className="navigation__nav">
           <ul className="navigation__list">
             <li className="navigation__item">
-              <a href="#about" className="navigation__link">
+              <a
+                href="#about"
+                className="navigation__link"
+                onClick={() => (navCheckbox.current.checked = false)}
+              >
                 <span>01</span>About Natous
               </a>
             </li>
             <li className="navigation__item">
-              <a href="#features" className="navigation__link">
+              <a
+                href="#features"
+                className="navigation__link"
+                onClick={() => (navCheckbox.current.checked = false)}
+              >
                 <span>02</span>Your benfits
               </a>
             </li>
             <li className="navigation__item">
-              <a href="#tours" className="navigation__link">
+              <a
+                href="#tours"
+                className="navigation__link"
+                onClick={() => (navCheckbox.current.checked = false)}
+              >
                 <span>03</span>Popular tours
               </a>
             </li>
             <li className="navigation__item">
-              <a href="#stories" className="navigation__link">
+              <a
+                href="#stories"
+                className="navigation__link"
+                onClick={() => (navCheckbox.current.checked = false)}
+              >
                 <span>04</span>Stories
               </a>
             </li>
             <li className="navigation__item">
-              <a href="#book" className="navigation__link">
+              <a
+                href="#book"
+                className="navigation__link"
+                onClick={() => (navCheckbox.current.checked = false)}
+              >
                 <span>05</span>Book now
               </a>
             </li>
@@ -72,9 +94,9 @@ function App() {
             <span className="heading-primary--main">Outdoors</span>
             <span className="heading-primary--sub">is where life happens</span>
           </h1>
-          <button className="btn btn--white btn--animated">
+          <a href="#tours" className="btn btn--white btn--animated">
             discover our tours
-          </button>
+          </a>
         </div>
       </header>
 

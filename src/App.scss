@@ -1,25 +1,8 @@
 @import 'index.scss';
 
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
-
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
-$color-grey-dark-3: #333;
-
 .header {
   position: relative;
-  height: 95vh;
+  height: 85vh;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -28,8 +11,12 @@ $color-grey-dark-3: #333;
     url(assets/hero-small.jpg);
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+  }
 
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
@@ -531,10 +518,13 @@ $color-grey-dark-3: #333;
 }
 
 .card {
-  perspective: 150rem;
-  -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
+
+  @supports ((-moz-perspective: 150rem) or (perspective: 150rem)) {
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+  }
 
   &__side {
     height: 52rem;
@@ -595,37 +585,52 @@ $color-grey-dark-3: #333;
   &__picture {
     height: 23rem;
     background-size: cover;
-    background-blend-mode: screen;
+
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 0.3px;
     border-top-right-radius: 0.3px;
 
     &--1 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        ),
-        url(assets/nat-5.jpg);
+      background-image: url(assets/nat-5.jpg);
     }
 
     &--2 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        ),
-        url(assets/nat-6.jpg);
+      background-image: url(assets/nat-6.jpg);
     }
 
     &--3 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        ),
-        url(assets/nat-7.jpg);
+      background-image: url(assets/nat-7.jpg);
+    }
+
+    @supports (background-blend-mode: screen) {
+      background-blend-mode: screen;
+      &--1 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark
+          ),
+          url(assets/nat-5.jpg);
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-primary-light,
+            $color-primary-dark
+          ),
+          url(assets/nat-6.jpg);
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          ),
+          url(assets/nat-7.jpg);
+      }
     }
   }
 
@@ -716,7 +721,7 @@ $color-grey-dark-3: #333;
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: white;
@@ -819,11 +824,15 @@ $color-grey-dark-3: #333;
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
-    //  border-radius: 50%;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
@@ -884,6 +893,11 @@ $color-grey-dark-3: #333;
     height: 100%;
     width: 100%;
     object-fit: cover;
+
+    @supports (-ms-ime-align: auto) {
+      width: auto;
+      object-fit: fill;
+    }
   }
 }
 
