@@ -42,7 +42,7 @@ function App() {
                 className="navigation__link"
                 onClick={() => (navCheckbox.current.checked = false)}
               >
-                <span>01</span>About Natous
+                about
               </a>
             </li>
             <li className="navigation__item">
@@ -51,7 +51,7 @@ function App() {
                 className="navigation__link"
                 onClick={() => (navCheckbox.current.checked = false)}
               >
-                <span>02</span>Your benfits
+                why we should go
               </a>
             </li>
             <li className="navigation__item">
@@ -60,7 +60,7 @@ function App() {
                 className="navigation__link"
                 onClick={() => (navCheckbox.current.checked = false)}
               >
-                <span>03</span>Popular tours
+                things to do
               </a>
             </li>
             <li className="navigation__item">
@@ -69,7 +69,7 @@ function App() {
                 className="navigation__link"
                 onClick={() => (navCheckbox.current.checked = false)}
               >
-                <span>04</span>Stories
+                testimonials
               </a>
             </li>
             <li className="navigation__item">
@@ -78,7 +78,7 @@ function App() {
                 className="navigation__link"
                 onClick={() => (navCheckbox.current.checked = false)}
               >
-                <span>05</span>Book now
+                book now
               </a>
             </li>
           </ul>
@@ -91,11 +91,11 @@ function App() {
         </div>
         <div className="header__text-box">
           <h1 className="heading-primary">
-            <span className="heading-primary--main">Outdoors</span>
-            <span className="heading-primary--sub">is where life happens</span>
+            <span className="heading-primary--main">utah</span>
+            <span className="heading-primary--sub">pls?</span>
           </h1>
           <a href="#tours" className="btn btn--white btn--animated">
-            discover our tours
+            just look at things we can do~
           </a>
         </div>
       </header>
@@ -104,29 +104,24 @@ function App() {
         <section className="section-about" id="about">
           <div className="center-text margin-bottom-big">
             <h2 className="heading-secondary">
-              Exciting tours for adventurous people
+              exciting things to do for adventurous ppl
             </h2>
           </div>
           <div className="section-about__grid">
             <div>
               <h3 className="heading-tertiary margin-bottom-small">
-                You're going to fall in love with nature
+                you're going to have a new perspective after surviving angels landing
               </h3>
               <div className="paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                a maiores in nisi, aspernatur asperiores facere debitis quisquam
-                quam officia eveniet, veritatis perspiciatis cumque
+                imagine all of the instagram photos you could have on top of hiking trail peaks and in-between valleys. my last post was 2 years ago (thanks covid) so i need something new
               </div>
               <h3 className="heading-tertiary margin-bottom-small">
-                Live adventures like you never have before
+                live adventures like you never have before
               </h3>
               <div className="paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                a maiores in nisi, aspernatur asperiores facere debitis quisquam
-                quam officia eveniet, veritatis perspiciatis cumque ex deleniti
-                doloremque. Necessitatibus, provident aut.
+                i mean c'mon look at the nature. jk i can camp like two days max, but after that, ya boi needs a shower and toilet. this would be done with airbnb.
               </div>
-              <button className="btn-text">Learn more &rarr;</button>
+              <button className="btn-text">learn more &rarr;</button>
             </div>
             <div className="composition">
               <img
@@ -164,8 +159,7 @@ function App() {
                 Explore the world
               </h3>
               <p className="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
+                i got lost in iceland and if i can find my way back from literally the middle of nowhere, i can do this. we can do this.
               </p>
             </div>
             <div className="feature-box">
@@ -174,8 +168,7 @@ function App() {
                 Meet nature
               </h3>
               <p className="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
+                ooooooo~
               </p>
             </div>
             <div className="feature-box">
@@ -184,8 +177,7 @@ function App() {
                 Find your way
               </h3>
               <p className="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
+                literally found my way in an entirely different country, we'll be fine here.
               </p>
             </div>
             <div className="feature-box">
@@ -194,8 +186,7 @@ function App() {
                 Live a healthier life
               </h3>
               <p className="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
+                ima need to get back into shape for something like this so ~motivation~
               </p>
             </div>
           </div>
@@ -203,7 +194,7 @@ function App() {
 
         <section className="section-tours" id="tours">
           <div className="center-text margin-bottom-big">
-            <h2 className="heading-secondary">Most popular tours</h2>
+            <h2 className="heading-secondary">not limited to this list, but interest check</h2>
           </div>
           <div className="section-tours__grid">
             <div className="card">
@@ -211,27 +202,26 @@ function App() {
                 <div className="card__picture card__picture--1">&nbsp;</div>
                 <h4 className="card__heading">
                   <span className="card__heading-span card__heading-span--1">
-                    The Sea Explorer
+                    river tubing and swimming
                   </span>
                 </h4>
                 <div className="card__details">
                   <ul>
-                    <li>3 day tours</li>
-                    <li>Up to 30 people</li>
-                    <li>2 tour guides</li>
-                    <li>Sleep in cozy hotels</li>
-                    <li>Difficulty: easy</li>
+                    <li>2 hours</li>
+                    <li>water fun</li>
+                    <li>requires getting in/out water</li>
+                    <li>difficulty: medium</li>
                   </ul>
                 </div>
               </div>
               <div className="card__side card__side--back card__side--back-1">
                 <div className="card__cta">
                   <div className="card__price-box">
-                    <p className="card__price-only">Only</p>
-                    <p className="card__price-value">$297</p>
+                    <p className="card__price-only">only</p>
+                    <p className="card__price-value">$25</p>
                   </div>
-                  <a href="#popup" className="btn btn--white">
-                    Book now!
+                  <a href="https://zionoutfitter.com/virgin-river-tubing/" className="btn btn--white">
+                    book now!
                   </a>
                 </div>
               </div>
@@ -241,27 +231,27 @@ function App() {
                 <div className="card__picture card__picture--2">&nbsp;</div>
                 <h4 className="card__heading">
                   <span className="card__heading-span card__heading-span--2">
-                    The Forest Hiker
+                    snowboarding and skiing
                   </span>
                 </h4>
                 <div className="card__details">
                   <ul>
-                    <li>7 day tours</li>
-                    <li>Up to 40 people</li>
-                    <li>6 tour guides</li>
-                    <li>Sleep in provided tents</li>
-                    <li>Difficulty: medium</li>
+                    <li>snowboarding~</li>
+                    <li>skiing</li>
+                    <li>snowboarding~~</li>
+                    <li>we could also do colorado</li>
+                    <li>difficulty: idk</li>
                   </ul>
                 </div>
               </div>
               <div className="card__side card__side--back card__side--back-2">
                 <div className="card__cta">
                   <div className="card__price-box">
-                    <p className="card__price-only">Only</p>
-                    <p className="card__price-value">$497</p>
+                    <p className="card__price-only">only</p>
+                    <p className="card__price-value">$ngl kinda expensive</p>
                   </div>
-                  <a href="#popup" className="btn btn--white">
-                    Book now!
+                  <a href="https://www.eaglepointresort.com/nearby-attractions/zion-national-park" className="btn btn--white">
+                    book now!
                   </a>
                 </div>
               </div>
@@ -271,27 +261,27 @@ function App() {
                 <div className="card__picture card__picture--3">&nbsp;</div>
                 <h4 className="card__heading">
                   <span className="card__heading-span card__heading-span--3">
-                    The Snow Adventurer
+                    hiking angel's landing
                   </span>
                 </h4>
                 <div className="card__details">
                   <ul>
-                    <li>5 day tours</li>
-                    <li>Up to 15 people</li>
-                    <li>3 tour guides</li>
-                    <li>Sleep in provided tents</li>
-                    <li>Difficulty: hard</li>
+                    <li>reason aaron wants to go</li>
+                    <li>scale cliffs with rope</li>
+                    <li>tour "guides"</li>
+                    <li>can do in a day</li>
+                    <li>difficulty: hard/extremely hard</li>
                   </ul>
                 </div>
               </div>
               <div className="card__side card__side--back card__side--back-3">
                 <div className="card__cta">
                   <div className="card__price-box">
-                    <p className="card__price-only">Only</p>
-                    <p className="card__price-value">$897</p>
+                    <p className="card__price-only">only</p>
+                    <p className="card__price-value">$an ankle or two, maybe your life</p>
                   </div>
-                  <a href="#popup" className="btn btn--white">
-                    Book now!
+                  <a href="https://wildlandtrekking.com/trips/angels-landing-day-hike/" className="btn btn--white">
+                    book now!
                   </a>
                 </div>
               </div>
@@ -299,7 +289,7 @@ function App() {
           </div>
 
           <div className="center-text margin-top-huge">
-            <button className="btn btn--green">Discover all tours</button>
+            <button className="btn btn--green">boredom is impossible!!</button>
           </div>
         </section>
 
@@ -314,7 +304,7 @@ function App() {
 
           <div className="center-text margin-bottom-big max-width-big">
             <h2 className="heading-secondary">
-              We make people genuinely happy
+              look at these testimonials!
             </h2>
           </div>
 
@@ -355,7 +345,7 @@ function App() {
               </figure>
               <div className="story__text">
                 <h3 className="heading-tertiary margin-bottom-small">
-                  WOW! My life is different now
+                  WOW! my life is different now bc i survived angels landing
                 </h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -421,7 +411,7 @@ function App() {
                       />
                       <label htmlFor="small" className="form__radio-label">
                         <span className="form__radio-button"></span>
-                        Small tour group
+                        small group
                       </label>
                     </div>
 
@@ -435,13 +425,13 @@ function App() {
                       />
                       <label htmlFor="large" className="form__radio-label">
                         <span className="form__radio-button"></span>
-                        Large tour group
+                        large group
                       </label>
                     </div>
                   </div>
 
                   <div className="form__group">
-                    <button className="btn btn--green">Next step &rarr;</button>
+                    <button className="btn btn--green">next step &rarr;</button>
                   </div>
                 </form>
               </div>
@@ -470,27 +460,27 @@ function App() {
               <ul className="footer__list">
                 <li className="footer__item">
                   <a href="#start" className="footer__link">
-                    Company
+                    company
                   </a>
                 </li>
                 <li className="footer__item">
                   <a href="#start" className="footer__link">
-                    Contact us
+                    contact aaron, you have his number
                   </a>
                 </li>
                 <li className="footer__item">
                   <a href="#start" className="footer__link">
-                    Carrers
+                    careers: sike lmao
                   </a>
                 </li>
                 <li className="footer__item">
                   <a href="#start" className="footer__link">
-                    Privacy policy
+                    privacy policy: basically don't die pls
                   </a>
                 </li>
                 <li className="footer__item">
                   <a href="#start" className="footer__link">
-                    Terms
+                    terms
                   </a>
                 </li>
               </ul>
@@ -498,7 +488,7 @@ function App() {
           </div>
           <div className="footer__column">
             <p className="footer__copyright">
-              Built by João Forja. Design made by Jonas Schmedtmann.
+              made in like 2 hours by yours truly
             </p>
           </div>
         </div>
@@ -515,10 +505,10 @@ function App() {
               &times;
             </a>
             <h2 className="heading-secondary margin-bottom-small">
-              Start booking now
+              start booking now
             </h2>
             <h3 className="heading-tertiary margin-bottom-small">
-              Important &ndash; Please read these terms before booking
+              important &ndash; please read these terms before booking
             </h3>
             <p className="popup__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -536,7 +526,7 @@ function App() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <button className="btn btn--green">Book now</button>
+            <button className="btn btn--green">book now</button>
           </div>
         </div>
       </div>
